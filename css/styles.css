@@ -21,6 +21,7 @@
   --grey-bg-color: #f5f4fa;
   --main-font-family: 'Roboto', sans-serif;
   --social-icon-color: #afb1b8;
+  --black-icon-color: #000000;
 }
 html {
   box-sizing: border-box;
@@ -135,7 +136,7 @@ img {
   align-items: center;
 }
 .logo-header-word {
-  color: #000000;
+  color: var(--black-icon-color);
 }
 .site-nav {
   display: flex;
@@ -450,7 +451,6 @@ img {
 }
 .box-social {
   margin-left: 30px;
-  border: 1px solid tomato;
 }
 .footer-social-list {
   display: flex;
@@ -483,7 +483,6 @@ img {
 
 .box-subscribe {
   margin-left: 93px;
-  border: 1px solid tomato;
   width: 570px;
 }
 
@@ -505,6 +504,7 @@ img {
   line-height: 1.25;
   color: var(--primary-white-color);
   outline: none;
+  padding-left: 16px;
 }
 
 .field-fotter-subscribe:focus {
@@ -515,7 +515,7 @@ img {
 .field-fotter-subscribe:-webkit-autofill:hover,
 .field-fotter-subscribe:-webkit-autofill:focus {
   -webkit-text-fill-color: var(--primary-white-color);
-  -webkit-box-shadow: 0 0 0px 1000px var(--secondary-bg-color) inset;
+  box-shadow: 0 0 0px 1000px var(--secondary-bg-color) inset;
 }
 .field-fotter-subscribe::placeholder {
   color: rgba(255, 255, 255, 0.6);
@@ -693,7 +693,7 @@ img {
 .icon-close-svg {
   width: 18px;
   height: 18px;
-  fill: #000000;
+  fill: var(--black-icon-color);
   background-color: var(--primary-white-color);
 }
 
@@ -753,6 +753,13 @@ img {
   fill: var(--accent-color);
 }
 
+.modal-field:-webkit-autofill,
+.modal-field:-webkit-autofill:hover,
+.modal-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--black-icon-color);
+  box-shadow: 0 0 0px 1000px var(--primary-white-color) inset;
+}
+
 .feedback-field {
   box-sizing: border-box;
   resize: none;
@@ -799,11 +806,13 @@ img {
 
 .checkbox-link {
   color: var(--accent-color);
+  margin-left: 5px;
 }
 .box-form .btn-actions {
   padding: 10px 55px;
   margin-left: auto;
   margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box-form .btn-actions:hover,
