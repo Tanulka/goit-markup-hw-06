@@ -590,12 +590,19 @@
           <b class="modal-action">Оставьте свои данные, мы вам перезвоним</b>
           <form>
             <label class="text-label">
-              Имя
-              <input class="modal-field" type="text" name="user-name" />
+              Имя<svg class="icon-user-name">
+                <use href="./images/icons.svg#icon-person-black"></use>
+              </svg>
+              <input
+                class="modal-field"
+                type="text"
+                name="user-name"
+                required
+              />
             </label>
             <label class="text-label">
               Телефон
-              <input class="modal-field" type="tel" name="tel" />
+              <input class="modal-field" type="tel" name="tel" required />
             </label>
             <label class="text-label">
               Почта
@@ -603,11 +610,16 @@
             </label>
             <label class="text-label">
               Коментарии
-              <textarea class="feedback-field" name="feedback" placeholder="Введите текст"></textarea>
+              <textarea
+                class="feedback-field"
+                name="feedback"
+                placeholder="Введите текст"
+              ></textarea>
             </label>
-            <input type="checkbox" name="user-checkbox" id="user-checkbox"
+            <input type="checkbox" name="user-checkbox" id="user-checkbox" />
             <label for="user-checkbox" class="checkbox-label text-label">
-            Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></label>
+              Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
+            </label>
             <button type="submit" class="btn btn-actions">Отправить</button>
           </form>
         </div>
