@@ -559,13 +559,14 @@
           </ul>
         </div>
         <div class="box-subscribe">
-          <form>
-            <h3 class="title-footer">Подпишитесь на рассылку</h3>
+          <h3 class="title-footer">Подпишитесь на рассылку</h3>
+          <form class="form-subscribe">
             <input
               class="field-fotter-subscribe"
               type="email"
               name="email"
               placeholder="E-mail"
+              required
             />
             <button type="submit" class="btn btn-actions">
               Подписаться<svg class="icon-send">
@@ -602,7 +603,7 @@
             </label>
             <label class="text-label">
               Телефон
-              <input class="modal-field" type="tel" name="tel" required />
+              <input class="modal-field" type="tel" name="phone" required />
               <svg class="icon-user">
                 <use href="./images/icons.svg#icon-phone-black"></use></svg
             ></label>
@@ -620,10 +621,18 @@
                 placeholder="Введите текст"
               ></textarea>
             </label>
-            <input type="checkbox" name="user-checkbox" id="user-checkbox" />
-            <label for="user-checkbox" class="checkbox-label text-label">
-              Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a>
-            </label>
+            <div class="box-checkbox">
+              <input
+                type="checkbox"
+                name="user-checkbox"
+                class="visually-hidden checkbox"
+                id="user-checkbox"
+              />
+              <label for="user-checkbox" class="checkbox-label text-label">
+                Соглашаюсь с рассылкой и принимаю
+                <a href="#" class="checkbox-link">Условия договора</a>
+              </label>
+            </div>
             <button type="submit" class="btn btn-actions">Отправить</button>
           </form>
         </div>
