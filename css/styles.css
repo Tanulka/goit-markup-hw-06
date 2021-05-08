@@ -743,7 +743,7 @@ img {
   top: 30px;
 }
 
-.modal-field:focus-within .icon-user {
+.modal-field:focus-within + .icon-user {
   fill: var(--accent-color);
 }
 
